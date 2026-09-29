@@ -17,11 +17,11 @@
 }
 
 .hero-small {
-  color: #2563eb;
-  font-size: 13px;
-  font-weight: 700;
+  color: #3708e3;
+  font-size: 20px;
+  font-weight: 900;
   letter-spacing: 2px;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
 }
 
 .hero h1 {
@@ -446,8 +446,8 @@
 }
 
 .quality-logo {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
   margin-bottom: 15px;
 }

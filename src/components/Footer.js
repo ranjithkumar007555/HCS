@@ -70,31 +70,41 @@ function Footer() {
 
 
         {/* Social Media */}
-        <div className="footer-social">
+        {/* Social Media & Google Review */}
+<div className="footer-social">
 
-          <h3>Follow Us</h3>
+  <h3>Follow Us</h3>
 
-          <div className="social-links">
+  <div className="social-links">
 
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaFacebook /> Facebook
-            </a>
+    <a
+      href="https://www.facebook.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+     <FaFacebook /> Facebook
+    </a>
 
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <AiFillInstagram /> Instagram
-            </a>
+    <a
+      href="https://www.instagram.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+     <AiFillInstagram /> Instagram
+    </a>
 
-          </div>
+    <a
+      href="https://share.google/G5TUatYEKp59g9LqS"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ⭐ Google Review
+    </a>
 
-        </div>
+  </div>
+
+</div>
+        
 
       </div>
 

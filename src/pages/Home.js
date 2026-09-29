@@ -7,6 +7,8 @@ import roImage from "../images/ro-service.jpg";
 import washingImage from "../images/washing-machine-service.jpg";
 
 import { FaPhoneVolume } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa6";
+
 
 import logo from "../components/images/logo.png";
 
@@ -57,7 +59,7 @@ function Home() {
         <div className="hero-content">
 
           <p className="hero-small">
-            PROFESSIONAL HOME APPLIANCE SERVICE
+            <FaStar /> PROFESSIONAL HOME APPLIANCE SERVICE
           </p>
 
           <h1>
@@ -66,9 +68,11 @@ function Home() {
           </h1>
 
           <p className="hero-description">
-            Reliable and professional service for your home appliances.
-            We provide quality AC, fridge, washing machine and RO services
-            with customer satisfaction as our priority.
+            Reliable and professional service for all your home appliances.
+  We provide quality AC, fridge, washing machine, and RO services.
+  Our experienced technicians ensure quick and efficient service.
+  We use quality materials and follow proper service procedures.
+  Customer satisfaction and reliable service are always our priority.
           </p>
 
           <div className="hero-buttons">
