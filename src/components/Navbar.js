@@ -1,53 +1,106 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../components/images/logo.png"
+import logo from "./images/logo.png";
+
+import "./Navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = () => setMenuOpen(false);
+  const goHome = () => {
+    setMenuOpen(false);
+
+    // Home page top
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  };
 
   return (
     <header className="navbar">
 
-      <Link to="/" className="brand" onClick={closeMenu}>
-        <span className="brand-logo">
-          <img className="brand-logo" 
-          src={logo} alt="" />
-        </span>
+      <div className="navbar-container">
 
-        <span className="brand-text">
-          HOME COMFORT
-          <small>SOLUTION</small>
-        </span>
-      </Link>
+        {/* Logo + Company Name */}
+        <Link
+          to="/"
+          className="brand"
+          onClick={goHome}
+        >
 
-      <button
-        className="menu-btn"
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Toggle navigation"
-        aria-expanded={menuOpen}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+          <div className="brand-logo">
+            <img
+              src={logo}
+              alt="Home Comfort Solution"
+            />
+          </div>
 
-      <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
+          <div className="brand-text">
+            <h2>Home Comfort Solution</h2>
+            <span>Home Appliance Service</span>
+          </div>
 
-        <Link to="/" onClick={closeMenu}>
-          Home
         </Link>
 
-        <Link to="/services" onClick={closeMenu}>
-          Services
-        </Link>
 
-        <Link to="/contact" onClick={closeMenu}>
-          Contact
-        </Link>
+        {/* 3 Line Menu */}
+        <button
+          className="menu-button"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-      </nav>
+
+        {/* Menu */}
+        {menuOpen && (
+          <div className="mobile-menu">
+
+            <Link
+              to="/"
+              onClick={goHome}
+            >
+              Home
+            </Link>
+
+            <Link
+              to="/services"
+              onClick={() => {
+                setMenuOpen(false);
+
+                window.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: "smooth"
+                });
+              }}
+            >
+              Services
+            </Link>
+
+            <Link
+              to="/contact"
+              onClick={() => {
+                setMenuOpen(false);
+
+                window.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: "smooth"
+                });
+              }}
+            >
+              Contact
+            </Link>
+
+          </div>
+        )}
+
+      </div>
 
     </header>
   );

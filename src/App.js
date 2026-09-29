@@ -1,5 +1,5 @@
-
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -12,23 +12,23 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="app">
+    <Router>
 
-        <Navbar />
+      <Navbar />
 
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
+      <Routes>
 
-        <Footer />
+        <Route path="/" element={<Home />} />
 
-      </div>
-    </BrowserRouter>
+        <Route path="/services" element={<Services />} />
+
+        <Route path="/contact" element={<Contact />} />
+
+      </Routes>
+
+      <Footer />
+
+    </Router>
   );
 }
 

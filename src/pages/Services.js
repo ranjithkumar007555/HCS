@@ -1,124 +1,204 @@
+import React, { useEffect } from "react";
+
+import acImage from "../images/ac-service.jpg";
+import fridgeImage from "../images/fridge-service.jpg";
+import roImage from "../images/ro-service.jpg";
+import washingImage from "../images/washing-machine-service.jpg";
+
+import "./Services.css";
 
 function Services() {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, []);
+
   const services = [
     {
-      icon: "❄️",
-      title: "AC Service & Repair",
-      description:
-        "Keep your air conditioner working efficiently with professional cleaning, maintenance and repair support.",
-      points: [
-        "AC cleaning and maintenance",
-        "Cooling-related service support",
-        "General AC inspection",
-        "Repair and service enquiries"
+      title: "AC Service",
+      image: acImage,
+      details: [
+        "AC general service",
+        "AC cleaning",
+        "AC maintenance",
+        "AC repair",
+        "Cooling problem service",
+        "AC installation support"
       ]
     },
     {
-      icon: "🧊",
-      title: "Refrigerator Service",
-      description:
-        "Reliable refrigerator maintenance and repair support to help keep your appliance functioning properly.",
-      points: [
-        "Refrigerator inspection",
-        "Cooling-related service support",
+      title: "Fridge Service",
+      image: fridgeImage,
+      details: [
+        "Refrigerator service",
+        "Cooling problem repair",
         "General maintenance",
-        "Repair service enquiries"
+        "Door and gasket checking",
+        "Water leakage checking",
+        "Electrical issue checking"
       ]
     },
     {
-      icon: "🧺",
       title: "Washing Machine Service",
-      description:
-        "Service support for washing machine maintenance and common appliance repair requirements.",
-      points: [
-        "Washing machine inspection",
-        "Maintenance support",
-        "General repair enquiries",
-        "Home appliance service"
+      image: washingImage,
+      details: [
+        "Washing machine service",
+        "Cleaning and maintenance",
+        "Water drainage problem",
+        "Noise problem checking",
+        "Spin problem checking",
+        "General repair support"
       ]
     },
     {
-      icon: "💧",
-      title: "RO Water Purifier Service",
-      description:
-        "RO water purifier maintenance and repair support for everyday household requirements.",
-      points: [
-        "RO maintenance",
-        "Filter-related service enquiries",
-        "Water purifier inspection",
-        "General repair support"
+      title: "RO Service",
+      image: roImage,
+      details: [
+        "RO service",
+        "Filter replacement",
+        "RO cleaning",
+        "Water flow checking",
+        "Water quality related maintenance",
+        "General RO repair"
       ]
     }
   ];
 
   return (
-    <div className="services-page">
+    <main className="services-page">
 
-      <section className="page-banner">
+      <section className="services-header">
 
-        <span>OUR SERVICES</span>
+        <p>OUR SERVICES</p>
 
         <h1>
           Home Appliance
-          <br />
-          Service & Support
+          <span> Services</span>
         </h1>
 
-        <p>
-          Professional service support for your
-          essential home appliances.
+        <p className="services-intro">
+          Professional and reliable service for your home appliances.
         </p>
 
       </section>
 
-      <section className="section">
 
-        <div className="section-heading">
-          <span>WHAT WE OFFER</span>
-          <h2>Our Service Details</h2>
-        </div>
+      <section className="services-list">
 
-        <div className="service-detail-grid">
+        {services.map((service, index) => (
 
-          {services.map((service, index) => (
-            <div className="service-detail-card" key={index}>
+          <div className="service-detail-card" key={index}>
 
-              <div className="large-service-icon">
-                {service.icon}
-              </div>
+            <div className="service-detail-image">
+
+              <img
+                src={service.image}
+                alt={service.title}
+              />
+
+            </div>
+
+            <div className="service-detail-content">
 
               <h2>{service.title}</h2>
 
-              <p>{service.description}</p>
+              <p>
+                We provide careful and reliable service to help
+                maintain your appliance performance.
+              </p>
 
               <ul>
-                {service.points.map((point, pointIndex) => (
-                  <li key={pointIndex}>
-                    ✓ {point}
+
+                {service.details.map((detail, i) => (
+                  <li key={i}>
+                    ✓ {detail}
                   </li>
                 ))}
+
               </ul>
 
             </div>
-          ))}
+
+          </div>
+
+        ))}
+
+      </section>
+
+      <section className="location-section">
+
+        <div className="section-title">
+
+          <p>SERVICE AREAS</p>
+
+          <h2>
+           Our Service Locations ⭐
+          </h2>
 
         </div>
 
+        <div className="location-list">
+
+  <span>
+    <i className="location-icon">📍</i>
+    Pallikaranai
+  </span>
+
+  <span>
+    <i className="location-icon">📍</i>
+    Medavakkam
+  </span>
+
+  <span>
+    <i className="location-icon">📍</i>
+    Madipakkam
+  </span>
+
+  <span>
+    <i className="location-icon">📍</i>
+    Chromepet
+  </span>
+
+  <span>
+    <i className="location-icon">📍</i>
+    Kovilambakkam
+  </span>
+
+  <span>
+    <i className="location-icon">📍</i>
+    Velachery
+  </span>
+
+  <span>
+    <i className="location-icon">📍</i>
+    Vaanuvampet
+  </span>
+
+</div>
+
       </section>
+
 
       <section className="service-note">
 
-        <h2>Service Warranty</h2>
+        <h2>Quality Service You Can Trust</h2>
 
         <p>
-          Warranty support is subject to the applicable
-          material, product and service conditions.
-          Please confirm warranty terms during your enquiry.
+          We focus on providing neat, professional and customer-friendly
+          service. Our goal is to solve your appliance problems with
+          quality workmanship and suitable materials.
         </p>
+
+        <strong>
+          Warranty: 1 Year based on material.
+        </strong>
 
       </section>
 
-    </div>
+    </main>
   );
 }
 

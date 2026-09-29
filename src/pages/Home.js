@@ -1,304 +1,322 @@
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../components/images/logo.png"
+
+import acImage from "../images/ac-service.jpg";
+import fridgeImage from "../images/fridge-service.jpg";
+import roImage from "../images/ro-service.jpg";
+import washingImage from "../images/washing-machine-service.jpg";
+
+import { FaPhoneVolume } from "react-icons/fa6";
+
+import logo from "../components/images/logo.png";
+
+import "./Home.css";
 
 function Home() {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, []);
+
   const services = [
     {
-      icon: "❄️",
       title: "AC Service",
-      text: "Professional AC cleaning, maintenance and repair services."
+      image: acImage,
+      description:
+        "Professional AC service, maintenance and repair for better cooling and performance."
     },
     {
-      icon: "🧊",
       title: "Fridge Service",
-      text: "Reliable refrigerator repair and maintenance services."
+      image: fridgeImage,
+      description:
+        "Reliable refrigerator repair and maintenance service for all common issues."
     },
     {
-      icon: "🧺",
-      title: "Washing Machine",
-      text: "Quality washing machine repair and service support."
+      title: "Washing Machine Service",
+      image: washingImage,
+      description:
+        "Expert washing machine service to keep your appliance working smoothly."
     },
     {
-      icon: "💧",
       title: "RO Service",
-      text: "RO water purifier maintenance and repair services."
+      image: roImage,
+      description:
+        "RO water purifier service, maintenance and filter-related solutions."
     }
   ];
 
-  const locations = [
-    "Pallikaranai",
-    "Medavakkam",
-    "Madipakkam",
-    "Chromepet",
-    "Kovilambakkam",
-    "Velachery",
-    "Vaanuvampet"
-  ];
-
   return (
-    <div className="home-page">
+    <main>
 
       {/* Hero Section */}
       <section className="hero">
 
         <div className="hero-content">
 
-          <span className="hero-badge">
-            ✦ PROFESSIONAL HOME SERVICES
-          </span>
+          <p className="hero-small">
+            PROFESSIONAL HOME APPLIANCE SERVICE
+          </p>
 
           <h1>
-            Comfort At Home.
-            <br />
-            <span>Quality You Trust.</span>
+            Home Comfort
+            <span> Solution</span>
           </h1>
 
-          <p>
-            Your trusted partner for AC, refrigerator,
-            washing machine and RO service.
-            We deliver reliable home appliance services
-            with care and professionalism.
+          <p className="hero-description">
+            Reliable and professional service for your home appliances.
+            We provide quality AC, fridge, washing machine and RO services
+            with customer satisfaction as our priority.
           </p>
 
           <div className="hero-buttons">
 
-            <Link to="/contact" className="btn primary-btn">
-              Book a Service →
+            <Link to="/contact" className="enquiry-button">
+              Enquiry Now
             </Link>
 
-            <a href="tel:9025952541" className="btn outline-btn">
-              📞 Call Now
+            <a
+              href="tel:9940070057"
+              className="call-button"
+            >
+              <FaPhoneVolume />
             </a>
 
           </div>
 
-          <div className="hero-stats">
+        </div>
 
-            <div>
-              <strong>4+</strong>
-              <span>Services</span>
-            </div>
+        <div className="hero-card">
 
-            <div>
-              <strong>1 Year</strong>
-              <span>Material Warranty*</span>
-            </div>
+  <img
+    src={logo}
+    alt="Home Comfort Solution Logo"
+    className="quality-logo"
+  />
 
-            <div>
-              <strong>7</strong>
-              <span>Service Areas</span>
-            </div>
+  <h3>Quality Service</h3>
 
-          </div>
+  <p>
+    Professional service with experienced technicians
+    and quality materials.
+  </p>
+
+  <div className="hero-card-line"></div>
+
+  <div className="warranty-icon">
+    🛡️
+  </div>
+
+  <strong>1 Year Warranty</strong>
+
+  <small>
+    Based on material
+  </small>
+
+</div>
+
+      </section>
+
+
+      {/* About Service */}
+      <section className="about-section">
+
+        <div className="section-title">
+
+          <p>WHY CHOOSE US</p>
+
+          <h2>
+            We Care About Your
+            <span> Comfort</span>
+          </h2>
 
         </div>
 
-        <div className="hero-visual">
+        <p className="about-text">
+          At Home Comfort Solution, we provide professional home appliance
+          services with a focus on quality, timely support and customer
+          satisfaction. Our team works carefully to provide reliable
+          solutions for your appliances.
+        </p>
 
-          <div className="hero-circle"></div>
+        <div className="features">
 
-          <div className="hero-appliance">
-            <img className="hero-appliance" 
-          src={logo} alt="" />
+          <div className="feature">
+            <div>✓</div>
+            <h3>Quality Service</h3>
+            <p>We provide neat and reliable service.</p>
           </div>
 
-          <div className="floating-card">
-            <span>✓</span>
-            <div>
-              <strong>Quality Service</strong>
-              <small>Home Comfort Solution</small>
-            </div>
+          <div className="feature">
+            <div>✓</div>
+            <h3>Experienced Work</h3>
+            <p>Professional appliance service and repair.</p>
+          </div>
+
+          <div className="feature">
+            <div>✓</div>
+            <h3>Customer Satisfaction</h3>
+            <p>Your comfort and satisfaction matter to us.</p>
           </div>
 
         </div>
 
       </section>
 
-      {/* About Section */}
-      <section className="section about-section">
 
-        <div className="section-heading">
-          <span>ABOUT US</span>
-          <h2>Making Your Home More Comfortable</h2>
-        </div>
+      {/* Services */}
+      <section className="home-services">
 
-        <div className="about-content">
+        <div className="section-title">
 
-          <div className="about-icon">🏠</div>
+          <p>OUR SERVICES</p>
 
-          <div>
-            <h3>Home Comfort Solution</h3>
+          <h2>
+            Professional Appliance
+            <span> Services</span>
+          </h2>
 
-            <p>
-              At Home Comfort Solution, we focus on
-              delivering dependable home appliance
-              services with care and attention to detail.
-              Our goal is to help customers maintain
-              their home appliances and enjoy a comfortable
-              living environment.
-            </p>
-
-            <p>
-              From AC servicing to refrigerator,
-              washing machine and RO maintenance,
-              we provide convenient service support
-              for your everyday needs.
-            </p>
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* Services Preview */}
-      <section className="section services-preview">
-
-        <div className="section-heading">
-          <span>WHAT WE DO</span>
-          <h2>Our Home Services</h2>
-          <p>
-            Professional support for your essential
-            home appliances.
-          </p>
         </div>
 
         <div className="service-grid">
 
           {services.map((service, index) => (
+
             <div className="service-card" key={index}>
 
-              <div className="service-icon">
-                {service.icon}
+              <div className="service-image">
+
+                <img
+                  src={service.image}
+                  alt={service.title}
+                />
+
               </div>
 
-              <h3>{service.title}</h3>
+              <div className="service-content">
 
-              <p>{service.text}</p>
+                <h3>{service.title}</h3>
 
-              <Link to="/services">
-                View Details →
-              </Link>
+                <p>
+                  {service.description}
+                </p>
+
+                <Link to="/contact">
+                  Enquire Now →
+                </Link>
+
+              </div>
 
             </div>
+
           ))}
 
         </div>
 
-        <div className="center-btn">
-          <Link to="/services" className="btn primary-btn">
-            Explore All Services
-          </Link>
-        </div>
-
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="section why-section">
-
-        <div className="section-heading">
-          <span>WHY CHOOSE HCS</span>
-          <h2>Service You Can Depend On</h2>
-        </div>
-
-        <div className="why-grid">
-
-          <div className="why-card">
-            <span>✓</span>
-            <h3>Quality Service</h3>
-            <p>
-              We focus on careful service and
-              attention to customer requirements.
-            </p>
-          </div>
-
-          <div className="why-card">
-            <span>✓</span>
-            <h3>Customer Care</h3>
-            <p>
-              We aim to provide a smooth and
-              convenient customer experience.
-            </p>
-          </div>
-
-          <div className="why-card">
-            <span>✓</span>
-            <h3>Reliable Support</h3>
-            <p>
-              Service support for everyday home
-              appliance maintenance needs.
-            </p>
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* Locations */}
-      <section className="section location-section">
-
-        <div className="section-heading">
-          <span>OUR SERVICE AREAS</span>
-          <h2>Serving Your Nearby Locations</h2>
-        </div>
-
-        <div className="location-list">
-
-          {locations.map((location, index) => (
-            <span key={index}>
-              📍 {location}
-            </span>
-          ))}
-
-        </div>
-
-      </section>
-
-      {/* Warranty */}
-      <section className="warranty-section">
-
-        <div className="warranty-content">
-
-          <div className="warranty-icon">🛡️</div>
-
-          <div>
-            <span>WARRANTY SUPPORT</span>
-
-            <h2>1 Year Warranty*</h2>
-
-            <p>
-              Material-based warranty support.
-              Warranty terms depend on the material,
-              product and applicable service conditions.
-            </p>
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* Contact CTA */}
-      <section className="cta-section">
-
-        <span>NEED HOME APPLIANCE SERVICE?</span>
-
-        <h2>
-          Let's Make Your Home
-          <br />
-          More Comfortable.
-        </h2>
-
-        <p>
-          Contact Home Comfort Solution today
-          for your service enquiry.
-        </p>
-
-        <Link to="/contact" className="btn primary-btn">
-          Send Enquiry →
+        <Link to="/services" className="view-services">
+          View All Services
         </Link>
 
       </section>
 
+
+      {/* Locations */}
+      <section className="location-section">
+
+        <div className="section-title">
+
+          <p>SERVICE AREAS</p>
+
+          <h2>
+           Our Service Locations ⭐
+          </h2>
+
+        </div>
+
+        <div className="location-list">
+
+  <span>
+    <i className="location-icon">📍</i>
+    Pallikaranai
+  </span>
+
+  <span>
+    <i className="location-icon">📍</i>
+    Medavakkam
+  </span>
+
+  <span>
+    <i className="location-icon">📍</i>
+    Madipakkam
+  </span>
+
+  <span>
+    <i className="location-icon">📍</i>
+    Chromepet
+  </span>
+
+  <span>
+    <i className="location-icon">📍</i>
+    Kovilambakkam
+  </span>
+
+  <span>
+    <i className="location-icon">📍</i>
+    Velachery
+  </span>
+
+  <span>
+    <i className="location-icon">📍</i>
+    Vaanuvampet
+  </span>
+
+</div>
+
+      </section>
+
+
+      {/* Warranty */}
+      <section className="warranty-section">
+
+  <div className="warranty-content">
+
+    <div className="warranty-icon">
+      🛡️
     </div>
+
+    <p>WARRANTY</p>
+
+    <h2>1 Year Warranty</h2>
+
+    <span>
+      Warranty applicable based on the material used.
+    </span>
+
+  </div>
+
+</section>
+
+
+      {/* Final CTA */}
+      <section className="cta-section">
+
+        <h2>
+          Need Home Appliance Service?
+        </h2>
+
+        <p>
+          Contact us today for professional and reliable service.
+        </p>
+
+        <Link to="/contact">
+          Get an Enquiry
+        </Link>
+
+      </section>
+
+    </main>
   );
 }
 
