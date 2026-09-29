@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.89deea26.css",
-    "main.js": "/static/js/main.43d2103e.js",
-    "static/js/488.29822971.chunk.js": "/static/js/488.29822971.chunk.js",
+    "main.css": "/static/css/main.62bf59d4.css",
+    "main.js": "/static/js/main.88f9ba12.js",
     "static/media/logo.png": "/static/media/logo.121788b0d93b679896aa.png",
+    "static/media/logo1.jpeg": "/static/media/logo1.faeffb25c1531528f073.jpeg",
+    "static/media/ro-service.jpg": "/static/media/ro-service.6278a80f114789babf3c.jpg",
+    "static/media/fridge-service.jpg": "/static/media/fridge-service.1b1b62761e66f81f64cb.jpg",
+    "static/media/washing-machine-service.jpg": "/static/media/washing-machine-service.d54e9b7c0580b91f0aa5.jpg",
     "index.html": "/index.html",
-    "main.89deea26.css.map": "/static/css/main.89deea26.css.map",
-    "main.43d2103e.js.map": "/static/js/main.43d2103e.js.map",
-    "488.29822971.chunk.js.map": "/static/js/488.29822971.chunk.js.map"
+    "main.62bf59d4.css.map": "/static/css/main.62bf59d4.css.map",
+    "main.88f9ba12.js.map": "/static/js/main.88f9ba12.js.map"
   },
   "entrypoints": [
-    "static/css/main.89deea26.css",
-    "static/js/main.43d2103e.js"
+    "static/css/main.62bf59d4.css",
+    "static/js/main.88f9ba12.js"
   ]
 }
